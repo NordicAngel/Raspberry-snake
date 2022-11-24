@@ -50,14 +50,15 @@ def new_food_pos(snake):
 
 def game_over():
   time.sleep(0.5)
-
+  hat.show_message(str(score),back_colour=(255,0,0))
   hat.clear(255,0,0)
-  time.sleep(1)
   hat.clear()
 
 def run_game():
   global snakeOrientation
   global food_pos
+  global score
+  score = 0
   snakeOrientation = "up"
   snake = [(3,7),(3,7),(3,7)]
   food_pos = new_food_pos(snake)
